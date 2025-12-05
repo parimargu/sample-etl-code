@@ -1,0 +1,63 @@
+2025-12-05 08:29:12,426 - NLP_ETL_Pipeline - INFO - Loading configuration from etl_pipeline/config/pipeline.yaml
+2025-12-05 08:29:12,428 - NLP_ETL_Pipeline - INFO - Initializing Spark Session
+2025-12-05 08:36:56,482 - etl_pipeline - INFO - Loading configuration from etl_pipeline/config/pipeline.yaml
+2025-12-05 08:36:56,482 - etl_pipeline - INFO - Loading configuration from etl_pipeline/config/pipeline.yaml
+2025-12-05 08:36:56,485 - etl_pipeline - INFO - Initializing Spark Session
+2025-12-05 08:36:56,485 - etl_pipeline - INFO - Initializing Spark Session
+2025-12-05 08:36:59,278 - etl_pipeline.src.pipeline - INFO - Starting Pipeline Execution
+2025-12-05 08:36:59,278 - etl_pipeline.src.pipeline - INFO - Starting Pipeline Execution
+2025-12-05 08:36:59,278 - etl_pipeline.src.pipeline - INFO - Using source type: file
+2025-12-05 08:36:59,278 - etl_pipeline.src.pipeline - INFO - Using source type: file
+2025-12-05 08:36:59,278 - etl_pipeline.src.pipeline - INFO - Using source: file
+2025-12-05 08:36:59,278 - etl_pipeline.src.pipeline - INFO - Using source: file
+2025-12-05 08:36:59,279 - etl_pipeline.src.sources.file_source - INFO - Reading csv files from: data/raw
+2025-12-05 08:36:59,279 - etl_pipeline.src.sources.file_source - INFO - Reading csv files from: data/raw
+2025-12-05 08:37:04,093 - etl_pipeline.src.sources.file_source - INFO - Successfully read 20 rows from data/raw
+2025-12-05 08:37:04,093 - etl_pipeline.src.sources.file_source - INFO - Successfully read 20 rows from data/raw
+2025-12-05 08:37:04,152 - etl_pipeline.src.targets.local_storage - INFO - Saving source output to data/processed/2025-12-05/source/output_083704.pickle
+2025-12-05 08:37:04,152 - etl_pipeline.src.targets.local_storage - INFO - Saving source output to data/processed/2025-12-05/source/output_083704.pickle
+2025-12-05 08:37:04,269 - etl_pipeline.src.targets.local_storage - INFO - Successfully saved 20 records to data/processed/2025-12-05/source/output_083704.pickle
+2025-12-05 08:37:04,269 - etl_pipeline.src.targets.local_storage - INFO - Successfully saved 20 records to data/processed/2025-12-05/source/output_083704.pickle
+2025-12-05 08:37:04,270 - etl_pipeline.src.targets.sqlite_sink - INFO - Writing source output to SQLite
+2025-12-05 08:37:04,270 - etl_pipeline.src.targets.sqlite_sink - INFO - Writing source output to SQLite
+2025-12-05 08:37:04,332 - etl_pipeline.src.targets.sqlite_sink - INFO - Successfully committed 20 records to SQLite table for stage: source
+2025-12-05 08:37:04,332 - etl_pipeline.src.targets.sqlite_sink - INFO - Successfully committed 20 records to SQLite table for stage: source
+2025-12-05 08:37:04,332 - etl_pipeline.src.preprocessing.cleaner - INFO - Applying preprocessing steps: ['lowercase', 'remove_urls', 'remove_punctuation']
+2025-12-05 08:37:04,332 - etl_pipeline.src.preprocessing.cleaner - INFO - Applying preprocessing steps: ['lowercase', 'remove_urls', 'remove_punctuation']
+2025-12-05 08:37:04,403 - etl_pipeline.src.preprocessing.cleaner - INFO - Preprocessing completed
+2025-12-05 08:37:04,403 - etl_pipeline.src.preprocessing.cleaner - INFO - Preprocessing completed
+2025-12-05 08:37:04,403 - etl_pipeline.src.targets.local_storage - INFO - Saving preprocessing output to data/processed/2025-12-05/preprocessing/output_083704.pickle
+2025-12-05 08:37:04,403 - etl_pipeline.src.targets.local_storage - INFO - Saving preprocessing output to data/processed/2025-12-05/preprocessing/output_083704.pickle
+2025-12-05 08:37:04,592 - etl_pipeline.src.targets.local_storage - INFO - Successfully saved 20 records to data/processed/2025-12-05/preprocessing/output_083704.pickle
+2025-12-05 08:37:04,592 - etl_pipeline.src.targets.local_storage - INFO - Successfully saved 20 records to data/processed/2025-12-05/preprocessing/output_083704.pickle
+2025-12-05 08:37:04,593 - etl_pipeline.src.targets.sqlite_sink - INFO - Writing preprocessing output to SQLite
+2025-12-05 08:37:04,593 - etl_pipeline.src.targets.sqlite_sink - INFO - Writing preprocessing output to SQLite
+2025-12-05 08:37:04,666 - etl_pipeline.src.targets.sqlite_sink - INFO - Successfully committed 20 records to SQLite table for stage: preprocessing
+2025-12-05 08:37:04,666 - etl_pipeline.src.targets.sqlite_sink - INFO - Successfully committed 20 records to SQLite table for stage: preprocessing
+2025-12-05 08:37:04,666 - etl_pipeline.src.chunking.chunker - INFO - Chunking text with target size 512 and overlap 50
+2025-12-05 08:37:04,666 - etl_pipeline.src.chunking.chunker - INFO - Chunking text with target size 512 and overlap 50
+2025-12-05 08:37:04,820 - etl_pipeline.src.chunking.chunker - INFO - Chunking completed
+2025-12-05 08:37:04,820 - etl_pipeline.src.chunking.chunker - INFO - Chunking completed
+2025-12-05 08:37:04,820 - etl_pipeline.src.targets.local_storage - INFO - Saving chunking output to data/processed/2025-12-05/chunking/output_083704.pickle
+2025-12-05 08:37:04,820 - etl_pipeline.src.targets.local_storage - INFO - Saving chunking output to data/processed/2025-12-05/chunking/output_083704.pickle
+2025-12-05 08:37:05,823 - etl_pipeline.src.targets.local_storage - INFO - Successfully saved 20 records to data/processed/2025-12-05/chunking/output_083704.pickle
+2025-12-05 08:37:05,823 - etl_pipeline.src.targets.local_storage - INFO - Successfully saved 20 records to data/processed/2025-12-05/chunking/output_083704.pickle
+2025-12-05 08:37:05,823 - etl_pipeline.src.targets.sqlite_sink - INFO - Writing chunking output to SQLite
+2025-12-05 08:37:05,823 - etl_pipeline.src.targets.sqlite_sink - INFO - Writing chunking output to SQLite
+2025-12-05 08:37:06,005 - etl_pipeline.src.targets.sqlite_sink - INFO - Successfully committed 20 records to SQLite table for stage: chunking
+2025-12-05 08:37:06,005 - etl_pipeline.src.targets.sqlite_sink - INFO - Successfully committed 20 records to SQLite table for stage: chunking
+2025-12-05 08:37:06,006 - etl_pipeline.src.embedding.embedder - INFO - Generating embeddings using model: sentence-transformers/sentence-t5-base
+2025-12-05 08:37:06,006 - etl_pipeline.src.embedding.embedder - INFO - Generating embeddings using model: sentence-transformers/sentence-t5-base
+2025-12-05 08:37:06,112 - etl_pipeline.src.embedding.embedder - INFO - Embedding generation completed
+2025-12-05 08:37:06,112 - etl_pipeline.src.embedding.embedder - INFO - Embedding generation completed
+2025-12-05 08:37:06,112 - etl_pipeline.src.targets.local_storage - INFO - Saving embedding output to data/processed/2025-12-05/embedding/output_083706.pickle
+2025-12-05 08:37:06,112 - etl_pipeline.src.targets.local_storage - INFO - Saving embedding output to data/processed/2025-12-05/embedding/output_083706.pickle
+2025-12-05 08:37:17,145 - etl_pipeline.src.targets.local_storage - INFO - Successfully saved 20 records to data/processed/2025-12-05/embedding/output_083706.pickle
+2025-12-05 08:37:17,145 - etl_pipeline.src.targets.local_storage - INFO - Successfully saved 20 records to data/processed/2025-12-05/embedding/output_083706.pickle
+2025-12-05 08:37:17,146 - etl_pipeline.src.targets.sqlite_sink - INFO - Writing embedding output to SQLite
+2025-12-05 08:37:17,146 - etl_pipeline.src.targets.sqlite_sink - INFO - Writing embedding output to SQLite
+2025-12-05 08:37:23,560 - etl_pipeline.src.targets.sqlite_sink - INFO - Successfully committed 20 records to SQLite table for stage: embedding
+2025-12-05 08:37:23,560 - etl_pipeline.src.targets.sqlite_sink - INFO - Successfully committed 20 records to SQLite table for stage: embedding
+2025-12-05 08:37:23,561 - etl_pipeline.src.pipeline - INFO - Pipeline Execution Completed
+2025-12-05 08:37:23,561 - etl_pipeline.src.pipeline - INFO - Pipeline Execution Completed
+2025-12-05 08:37:24,496 - py4j.clientserver - INFO - Closing down clientserver connection
