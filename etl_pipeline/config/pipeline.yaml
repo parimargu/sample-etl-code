@@ -1,0 +1,31 @@
+pipeline:
+  name: "NLP_ETL_Pipeline"
+  base_path: "/home/marguai/work/workarea/code/Google_Antigravity/nlp_etl_pipeline_1"
+
+sources:
+  hive:
+    table_name: "documents_table"
+    query: "SELECT doc_id, source_text FROM documents_table WHERE department IN ('Admin', 'HR', 'Finance', 'IT')"
+  file:
+    path: "data/raw"
+    format: "csv" # or json
+
+preprocessing:
+  steps:
+    - "lowercase"
+    - "remove_urls"
+    - "remove_punctuation"
+
+chunking:
+  strategy: "fixed_size"
+  chunk_size: 512
+  overlap: 50
+
+embedding:
+  model_name: "sentence-transformers/sentence-t5-base"
+
+targets:
+  local_storage:
+    path: "data/processed"
+  sqlite:
+    db_path: "data/processed/vector_db.sqlite"
